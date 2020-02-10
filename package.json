@@ -1,0 +1,24 @@
+{
+    "name": "@statikbe/helpers",
+    "version": "1.0.0",
+    "description": "Helper functions",
+    "license": "MIT",
+    "repository": "statikbe/npm-helpers",
+    "main": "src/index.js",
+    "keywords": [
+        "npm",
+        "package",
+        "statikbe",
+        "helper",
+        "helpers"
+    ],
+    "devDependencies": {
+        "webpack": "^4.41.5",
+        "webpack-cli": "^3.3.10"
+    },
+    "scripts": {
+        "dev": "node_modules/webpack/bin/webpack.js --env.NODE_ENV=development --mode=development --progress --hide-modules",
+        "watch": "npm run dev -- --watch",
+        "prod": "node_modules/webpack/bin/webpack.js --env.NODE_ENV=production --mode=production --no-progress --hide-modules"
+    }
+}
