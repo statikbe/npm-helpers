@@ -1,5 +1,7 @@
 # @statikbe/helpers
 
+https://www.npmjs.com/package/@statikbe/helpers
+
 ## Installation
 
 ```
