@@ -19,7 +19,7 @@ toArray(document.querySelector('.my-class'));
 
 | method | description | returns |
 | --- | --- | --- |
-| isIterable(obj) | Checks if `obj` is iterable. | Boolean |
-| toArray(obj) | Converts iterable object to array, if not iterable creates array containing `obj`. | Array |
-| toggle(el [, show]) | Shows or hides target element(s) | - |
-| trigger() | Trigger an event on element(s) | - |
+| `isIterable(obj)` | Checks if `obj` is iterable. | `Boolean` |
+| `toArray(obj)` | Converts iterable object to array, if not iterable creates array containing `obj`. | `Array` |
+| `toggle(elements [, display])` | Shows or hides target element(s). | - |
+| `trigger(elements, eventName)` | Trigger an event on element(s). | - |

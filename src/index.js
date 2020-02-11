@@ -2,21 +2,21 @@
 
 //  maintain alphabetical order please :)
 
-export function isIterable(object) {
+export function isIterable(obj) {
 
-    if (object === null) return false;
+    if (obj === null) return false;
 
-    return typeof object[Symbol.iterator] === 'function';
+    return typeof obj[Symbol.iterator] === 'function';
 }
 
-export function toArray(object) {
+export function toArray(obj) {
 
-    if (isIterable(object)) {
+    if (isIterable(obj)) {
 
-        return [ ...object ];
+        return [ ...obj ];
     }
 
-    return [ object ];
+    return [ obj ];
 }
 
 export function toggle(elements, display) {
