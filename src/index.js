@@ -1,11 +1,22 @@
 'use strict';
 
-export function trigger(elements, eventName) {
+//  maintain alphabetical order please :)
 
-    toArray(elements).forEach(element => {
+export function isIterable(object) {
 
-        element.dispatchEvent(new Event(eventName));
-    });
+    if (object === null) return false;
+
+    return typeof object[Symbol.iterator] === 'function';
+}
+
+export function toArray(object) {
+
+    if (isIterable(object)) {
+
+        return [ ...object ];
+    }
+
+    return [ object ];
 }
 
 export function toggle(elements, display) {
@@ -23,19 +34,10 @@ export function toggle(elements, display) {
     });
 }
 
-export function toArray(object) {
+export function trigger(elements, eventName) {
 
-    if (isIterable(object)) {
+    toArray(elements).forEach(element => {
 
-        return [ ...object ];
-    }
-
-    return [ object ];
-}
-
-export function isIterable(object) {
-
-    if (object == null) return false;
-
-    return typeof object[Symbol.iterator] === 'function';
+        element.dispatchEvent(new Event(eventName));
+    });
 }
